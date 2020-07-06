@@ -1,25 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import './App.css';
+import Nav from './components/Nav/Nav';
+import HeroesFeatured from './components/HeroesFeatured/HeroesFeatured';
+import SearchView from './components/SearchView/SearchView';
+import HeroDetailed from './components/HeroDetailed/HeroDetailed';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Nav />
+        <main>
+          <div className="container">
+            <Switch>
+              <Route exact path="/">
+                <HeroesFeatured />
+              </Route>
+              <Route path="/search/:name">
+                <SearchView />
+              </Route>
+              <Route path="/hero/:id">
+                <HeroDetailed />
+              </Route>
+            </Switch>
+          </div>
+        </main>
+      </Router>
+      <footer>
+        <div className="container">
+          <p>This content is kindly provided by <a href="https://superheroapi.com/">Superhero API</a></p>
+        </div>
+      </footer>
+    </>
   );
 }
 
