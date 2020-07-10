@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/heroapi2/static/css/main.b881a246.chunk.css",
+    "main.js": "/heroapi2/static/js/main.1306e048.chunk.js",
+    "main.js.map": "/heroapi2/static/js/main.1306e048.chunk.js.map",
+    "runtime-main.js": "/heroapi2/static/js/runtime-main.da816e44.js",
+    "runtime-main.js.map": "/heroapi2/static/js/runtime-main.da816e44.js.map",
+    "static/js/2.33aa280f.chunk.js": "/heroapi2/static/js/2.33aa280f.chunk.js",
+    "static/js/2.33aa280f.chunk.js.map": "/heroapi2/static/js/2.33aa280f.chunk.js.map",
+    "index.html": "/heroapi2/index.html",
+    "precache-manifest.9ee59c338f3258f7363f607c1f4bdec3.js": "/heroapi2/precache-manifest.9ee59c338f3258f7363f607c1f4bdec3.js",
+    "service-worker.js": "/heroapi2/service-worker.js",
+    "static/css/main.b881a246.chunk.css.map": "/heroapi2/static/css/main.b881a246.chunk.css.map",
+    "static/js/2.33aa280f.chunk.js.LICENSE.txt": "/heroapi2/static/js/2.33aa280f.chunk.js.LICENSE.txt",
+    "static/media/boxing.svg": "/heroapi2/static/media/boxing.1698dbf2.svg",
+    "static/media/durable.svg": "/heroapi2/static/media/durable.68a9807a.svg",
+    "static/media/fist.svg": "/heroapi2/static/media/fist.90c5025d.svg",
+    "static/media/nav_logo.png": "/heroapi2/static/media/nav_logo.711aa06f.png",
+    "static/media/speedometer.svg": "/heroapi2/static/media/speedometer.f09b4e84.svg",
+    "static/media/thinking.svg": "/heroapi2/static/media/thinking.e11713e8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da816e44.js",
+    "static/js/2.33aa280f.chunk.js",
+    "static/css/main.b881a246.chunk.css",
+    "static/js/main.1306e048.chunk.js"
+  ]
+}
