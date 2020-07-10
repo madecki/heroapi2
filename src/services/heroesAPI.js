@@ -2,8 +2,9 @@ import axios from 'axios';
 
 const accessToken = 3658742804152352;
 
-export const getFullHeroById = id => {
-  return axios.get(`https://superheroapi.com/api/${accessToken}/${id}`)
+export const getFullHeroById = async id => {
+  const {data} = await axios.get(`https://superheroapi.com/api/${accessToken}/${id}`)
+  return data;
 }
 
 export const searchHeroByName = name => {

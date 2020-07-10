@@ -5,18 +5,19 @@ import Loader from '../Loader/Loader';
 import { useParams } from 'react-router-dom';
 
 function HeroDetailed() {
-  const [heroData, setHeroData] = useState([]);
+  const [heroData, setHeroData] = useState({});
   const [isLoading, setLoadingState] = useState(true);
   const { id } = useParams();
 
-  const fetchHero = () => {
-    getFullHeroById(id);
+  const fetchHero = async () => {
+    const fullHeroInfo = await getFullHeroById(id);
+    setHeroData(fullHeroInfo)
     setLoadingState(false)
   }
 
   useEffect(() => {
     fetchHero();
-  }, [fetchHero])
+  }, [id])
 
   return (
     <>

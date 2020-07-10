@@ -1,34 +1,51 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 import { searchHeroByName } from '../../services/heroesAPI';
 import HeroSimplified from '../HeroSimplified/HeroSimplified';
 
-function SearchView() {
-  const { name } = useParams();
-  const [ searchList, setSearchListContent ] = useState([]);
-  const [ errorInfo, setErrorInfo ] = useState();
+export default class SearchView extends React.Component {
+  constructor(props) {
+    super();
+    console.log(props.match.params.name);
+    this.state = {
+      searchName: props.match.params.name,
+      searchList: [],
+      errorInfo: ''
+    }
+  }
 
-  useEffect(() => {
-    searchHeroByName(name).then(searchResults => {
+  seatchForHero = () => {
+    const {searchName} = this.state
+    searchHeroByName(searchName).then(searchResults => {
       const { data } = searchResults;
       if (data.error) {
-        setErrorInfo(data.error)
+        this.setState({errorInfo: data.error})
+        this.setState({searchList: []})
         return;
       }
 
       const { results } = data;
-      setSearchListContent(results);
+      this.setState({searchList: results})
+      this.setState({errorInfo: ''})
       console.log(results)
-    })                                         
-  }, [name])
+    })   
+  }
+
+  componentDidMount() {
+    this.seatchForHero();                   
+  };
+
+  // componentDidUpdate = () =>  {
+  //   this.seatchForHero();
+  // }
   
-
-  return <section>
-    { errorInfo && <h2>{errorInfo}</h2>}
-    <ul>
-      {searchList.map(({name, image, powerstats, id} = {}) => <HeroSimplified key={id} id={id} name={name} imgUrl={image.url} powerstats={powerstats} />)}
-    </ul>
-  </section>
+  render() {
+    return (
+      <section>
+        { this.state.errorInfo && <h2>{this.state.errorInfo}</h2>}
+        <ul>
+          {this.state.searchList.map(({name, image, powerstats, id} = {}) => <HeroSimplified key={id} id={id} name={name} imgUrl={image.url} powerstats={powerstats} />)}
+        </ul>
+      </section>
+    )
+  }
 }
-
-export default SearchView;

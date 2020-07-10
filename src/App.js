@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-} from "react-router-dom";
+} from 'react-router-dom';
 import './App.css';
 import Nav from './components/Nav/Nav';
 import HeroesFeatured from './components/HeroesFeatured/HeroesFeatured';
@@ -21,9 +21,7 @@ function App() {
               <Route exact path="/">
                 <HeroesFeatured />
               </Route>
-              <Route path="/search/:name">
-                <SearchView />
-              </Route>
+              <Route path="/search/:name" component={SearchView} />
               <Route path="/hero/:id">
                 <HeroDetailed />
               </Route>
