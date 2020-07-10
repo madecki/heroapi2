@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "31207eb51beaf08fc1029593110ef116",
+    "revision": "a78cb69ef47cd16c7f7560989f8d11fe",
     "url": "/heroapi2/index.html"
   },
   {
-    "revision": "2c9bd55a506734930d0e",
+    "revision": "20b59ae0e164fcdb4760",
     "url": "/heroapi2/static/css/main.b881a246.chunk.css"
   },
   {
-    "revision": "649690f6c5e2de66c6e5",
-    "url": "/heroapi2/static/js/2.33aa280f.chunk.js"
+    "revision": "1d4db263e28044876998",
+    "url": "/heroapi2/static/js/2.46146876.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/heroapi2/static/js/2.33aa280f.chunk.js.LICENSE.txt"
+    "url": "/heroapi2/static/js/2.46146876.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2c9bd55a506734930d0e",
-    "url": "/heroapi2/static/js/main.1306e048.chunk.js"
+    "revision": "20b59ae0e164fcdb4760",
+    "url": "/heroapi2/static/js/main.cb401af8.chunk.js"
   },
   {
     "revision": "dd5b6e38345e9fd5a238",
